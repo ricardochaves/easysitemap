@@ -14,6 +14,11 @@ namespace EasySiteMap.IO
     /// </remarks>
     public class WriteFileXML : IWriteFileXML
     {
+        /// <summary>
+        /// Write the XML file on disk
+        /// </summary>
+        /// <param name="file">File to be recorded</param>
+        /// <param name="path">Path where it is saved.</param>
         public void WriteFile(XDocument file, string path)
         {
             file.Save(path);
