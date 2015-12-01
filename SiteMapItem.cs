@@ -25,20 +25,54 @@ namespace EasySiteMap
         /// Store for the URL property.</summary>
         private string _url;
 
+        /// <summary>
+        /// The class constructor.
+        /// </summary>
+        /// <param name="url">URL mapped.</param>
+        public SiteMapItem(string url)
+        {
+            _url = url;
+        }
+
+        /// <summary>
+        /// The class constructor.
+        /// </summary>
+        /// <param name="url">URL mapped.</param>
+        /// <param name="lastmodified">The date that the content URL has been changed.</param>
+        public SiteMapItem(string url, DateTime? lastmodified)
+        {
+            _lastmodified = lastmodified;
+            _url = url;
+        }
+
+        /// <summary>
+        /// The class constructor.
+        /// </summary>
+        /// <param name="url">URL mapped.</param>
+        /// <param name="lastmodified">The date that the content URL has been changed.</param>
+        /// <param name="change">Frequency in which the contents of the URL is updated.</param>
+        public SiteMapItem(string url, DateTime? lastmodified, ChangeFrequency? change)
+        {
+            _lastmodified = lastmodified;
+            _url = url;
+            _changefrequency = change;
+        }
+
+        /// <summary>
+        /// The class constructor.
+        /// </summary>
+        /// <param name="url">URL mapped.</param>
+        /// <param name="lastmodified">The date that the content URL has been changed.</param>
+        /// <param name="change">Frequency in which the contents of the URL is updated.</param>
+        /// <param name="priority">The priority of the URL of all your site's URLs.</param>
         public SiteMapItem(string url, DateTime? lastmodified,  ChangeFrequency? change, double? priority)
         {
             _lastmodified = lastmodified;
             _priority = priority;
             _url = url;
             _changefrequency = change;
-        }
 
-        public SiteMapItem(string url)
-        {
-            _url = url;
         }
-
-        public SiteMapItem(){}
 
         /// <summary>
         /// ChangeFrequency </summary>

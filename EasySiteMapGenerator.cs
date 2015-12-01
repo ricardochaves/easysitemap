@@ -75,8 +75,11 @@ namespace EasySiteMap
                 {
                     _writeFile.WriteFile(item.xml, index.Config.LocalFile + item.fileName);
                 }
+
+                _writeFile.WriteFile(index.xml, index.Config.LocalFile + "sitemap_index.xml");
+
             }
-            _writeFile.WriteFile(index.xml, index.Config.LocalFile + "sitemap_index.xml");
+            
         }
     }
 }
