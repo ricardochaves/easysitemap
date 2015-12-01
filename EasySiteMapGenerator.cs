@@ -47,26 +47,18 @@ namespace EasySiteMap
 
         public void GenerateSiteMap(IEnumerable<ISiteMapItem> siteItens)
         {
-            try
-            {
-                _siteIndex.AllUrls = siteItens;
-                _siteIndex.ProcessURL();
+            _siteIndex.AllUrls = siteItens;
+            _siteIndex.ProcessURL();
 
-                GravarXMLs(_siteIndex);
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception("Erro in GenerateSiteMap.", ex);
-            }
+            GravarXMLs(_siteIndex);
         }
         
 
         private void GravarXMLs(SitemMapIndex index)
         {
-         if (index.Files.Count() == 1)
-            {                
+           
+            if (index.Files.Count() == 1)
+            {
                 _writeFile.WriteFile(index.Files.FirstOrDefault().xml, index.Config.LocalFile + "sitemap.xml");
             }
             else
@@ -79,6 +71,8 @@ namespace EasySiteMap
                 _writeFile.WriteFile(index.xml, index.Config.LocalFile + "sitemap_index.xml");
 
             }
+           
+         
             
         }
     }
