@@ -12,7 +12,7 @@ namespace EasySiteMap.Generators
     /// Logic which is generated throughout the body of the XML file sitemap_index.xml.</summary>
     /// <remarks>
     /// </remarks>
-    class XMLIndexGenerator : IXMLIndexGenerator
+    public class XMLIndexGenerator : IXMLIndexGenerator
     {
         private static readonly XNamespace _xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9";
         private static readonly XNamespace _xsi = "http://www.w3.org/2001/XMLSchema-instance";
