@@ -40,6 +40,7 @@ namespace EasySiteMap.Generators
         {
             
             var itemElement = new XElement(_xmlns + "sitemap", new XElement(_xmlns + "loc", dominio.ToLowerInvariant() + "/" + item.fileName.ToLowerInvariant()));
+            itemElement.Add( new XElement(_xmlns + "lastmod", DateTime.Now.ToString("yyyy-MM-dd")));
             return itemElement;
             
         }
