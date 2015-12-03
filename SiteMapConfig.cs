@@ -22,7 +22,7 @@ namespace EasySiteMap
         private string _dominio;
 
         /// <summary>
-        /// Dominio </summary>
+        /// Domain </summary>
         /// <value>
         /// Domain to be used in sitemap_index links.</value>
         public string Domain
