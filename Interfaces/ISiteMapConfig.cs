@@ -10,6 +10,7 @@ namespace EasySiteMap.Interfaces
     {
         int TotalItensByFile { get; set; }
         string LocalFile { get; set; }
-        string Dominio { get; set; }
+        string Domain { get; set; }
+        void ValidateData();
     }
 }

@@ -107,7 +107,7 @@ namespace EasySiteMap
                 item.xml = _UrlXMLGenerator.GenerateXMLUrls(item.itens);
             }
 
-            _xml = _IndexXMLGenerator.GenerateXMLIndex(_files, Config.Dominio);
+            _xml = _IndexXMLGenerator.GenerateXMLIndex(_files, Config.Domain);
         }
 
         public void ProcessURL()

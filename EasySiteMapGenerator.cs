@@ -47,6 +47,7 @@ namespace EasySiteMap
 
         public void GenerateSiteMap(IEnumerable<ISiteMapItem> siteItens)
         {
+            _config.ValidateData();
             _siteIndex.AllUrls = siteItens;
             _siteIndex.ProcessURL();
 

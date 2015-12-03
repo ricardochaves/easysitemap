@@ -25,7 +25,7 @@ namespace EasySiteMap
         /// Dominio </summary>
         /// <value>
         /// Domain to be used in sitemap_index links.</value>
-        public string Dominio
+        public string Domain
         {
             get
             {
@@ -71,5 +71,23 @@ namespace EasySiteMap
                 _totalitensbyfile = value;
             }
         }
+
+        public void ValidateData()
+        {
+            if (_localfile.EndsWith(@"\") == false)
+            {
+                throw new Exception(String.Format("The value of FileLocal property must end with a {0}", @"\"));
+            }
+
+            if (_dominio.EndsWith(@"\") == false)
+            {
+                throw new Exception(String.Format("The value of Domain property must end with a {0}", @"\"));
+            }
+            //if (Uri.CheckHostName(_dominio) == UriHostNameType.Unknown)
+            //{
+            //    throw new Exception(String.Format("Check the value of the 'Domain'. The current value does not appear to be a domain. Current Value is: {0}", _dominio));
+            //}
+        }
+
     }
 }
